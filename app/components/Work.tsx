@@ -100,7 +100,9 @@ export default function Work() {
                 fill
                 style={{ objectFit: "cover" }}
                 className="rounded-lg shadow-md group-hover:shadow-lg transition-shadow duration-300"
-                loading="lazy"
+                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                priority={index < 4}
+                loading={index >= 4 ? "lazy" : undefined}
               />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 rounded-lg flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
