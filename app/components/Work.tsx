@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import Image from 'next/image'
+import CustomImage from './CustomImage'
 
 const interiorProjects = [
   { src: 'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/interior/IMG_4659.JPG', alt: 'Interior Project 1' },
@@ -58,7 +58,7 @@ export default function Work() {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
         {interiorProjects.map((project, index) => (
           <div key={index} className="relative w-full h-48">
-            <Image 
+            <CustomImage 
               src={project.src} 
               alt={project.alt} 
               layout="fill"
@@ -77,7 +77,7 @@ export default function Work() {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {exteriorProjects.map((project, index) => (
           <div key={index} className="relative w-full h-48">
-            <Image 
+            <CustomImage 
               src={project.src} 
               alt={project.alt} 
               layout="fill"
