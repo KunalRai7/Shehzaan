@@ -87,9 +87,8 @@ function PlanningCard({ item }: { item: PlanningOption }) {
           <Image 
             src={item.image} 
             alt={item.title} 
-            layout="fill"
-            objectFit="contain"
-            className="absolute top-0 left-0 w-full h-full origin-center -rotate-90"
+            fill
+            style={{ objectFit: "contain", transform: "rotate(-90deg)" }}
           />
         </div>
       </CardHeader>

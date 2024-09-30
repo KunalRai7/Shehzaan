@@ -80,8 +80,8 @@ const ReviewCard = ({
             className="rounded-full" 
             src={img} 
             alt={`${name}'s avatar`}
-            layout="fill"
-            objectFit="cover"
+            width={32}
+            height={32}
           />
         </div>
         <div className="flex flex-col">

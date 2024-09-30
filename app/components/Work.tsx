@@ -1,9 +1,15 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { createPortal } from 'react-dom'
+import { useInView } from 'react-intersection-observer';
 
-const interiorProjects = [
+interface Project {
+  src: string;
+  alt: string;
+}
+
+const interiorProjects: Project[] = [
   { src: '/Shehzaan/images/interior/IMG_3810.JPG', alt: 'Interior Project 1' },
   { src: '/Shehzaan/images/interior/IMG_3811.JPG', alt: 'Interior Project 2' },
   { src: '/Shehzaan/images/interior/IMG_3812.JPG', alt: 'Interior Project 3' },
@@ -31,7 +37,7 @@ const interiorProjects = [
   { src: '/Shehzaan/images/interior/IMG_5664.JPG', alt: 'Interior Project 25' },
 ]
 
-const exteriorProjects = [
+const exteriorProjects: Project[] = [
   { src: '/Shehzaan/images/exterior/IMG_4352.JPG', alt: 'Exterior Project 1' },
   { src: '/Shehzaan/images/exterior/IMG_4353.JPG', alt: 'Exterior Project 2' },
   { src: '/Shehzaan/images/exterior/IMG_4354.JPG', alt: 'Exterior Project 3' },
@@ -88,30 +94,10 @@ export default function Work() {
     );
   };
 
-  const renderProjects = (projects: { src: string; alt: string }[]) => (
+  const renderProjects = (projects: Project[]) => (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
       {projects.map((project, index) => (
-        <div key={index} className="relative w-full h-48 cursor-pointer group" onClick={() => openModal(project.src)}>
-          {imagesLoaded && (
-            <>
-              <Image 
-                src={project.src} 
-                alt={project.alt} 
-                fill
-                style={{ objectFit: "cover" }}
-                className="rounded-lg shadow-md group-hover:shadow-lg transition-shadow duration-300"
-                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                priority={index < 4}
-                loading={index >= 4 ? "lazy" : undefined}
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
-                </svg>
-              </div>
-            </>
-          )}
-        </div>
+        <ProjectImage key={index} project={project} index={index} openModal={openModal} />
       ))}
     </div>
   );
@@ -142,4 +128,46 @@ export default function Work() {
       <Modal />
     </>
   )
+}
+
+interface ProjectImageProps {
+  project: Project;
+  index: number;
+  openModal: (src: string) => void;
+}
+
+function ProjectImage({ project, index, openModal }: ProjectImageProps) {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    rootMargin: '200px 0px',
+  });
+
+  return (
+    <div 
+      ref={ref}
+      className="relative w-full h-48 cursor-pointer group" 
+      onClick={() => openModal(project.src)}
+    >
+      {inView && (
+        <>
+          <Image 
+            src={project.src} 
+            alt={project.alt} 
+            fill
+            style={{ objectFit: "cover" }}
+            className="rounded-lg shadow-md group-hover:shadow-lg transition-shadow duration-300"
+            sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            priority={index < 4}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAI8wNPvd7POQAAAABJRU5ErkJggg=="
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 rounded-lg flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+            </svg>
+          </div>
+        </>
+      )}
+    </div>
+  );
 }

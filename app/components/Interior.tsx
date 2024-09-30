@@ -166,8 +166,9 @@ function InteriorCard({ item }: { item: InteriorItem }) {
             id={`image-${item.title}`}
             src={item.images[currentImageIndex]} 
             alt={`Interior Design ${currentImageIndex + 1}`} 
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
+            priority={currentImageIndex === 0} // Add priority for the first image
           />
         </div>
         {item.images.length > 1 && (

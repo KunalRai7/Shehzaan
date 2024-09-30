@@ -167,8 +167,9 @@ function ExteriorCard({ item }: { item: ExteriorItem }) {
             id={`image-${item.price}`}
             src={item.images[currentImageIndex]} 
             alt={`Exterior Design ${currentImageIndex + 1}`} 
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
+            priority={currentImageIndex === 0} // Add priority for the first image
           />
         </div>
         <button 
