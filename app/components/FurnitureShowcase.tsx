@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Exterior from './Exterior'
 import Interior from './Interior'
@@ -11,11 +10,9 @@ import Work from './Work'
 const categories = ['exterior', 'interior', 'plans', 'work']
 
 export default function FurnitureShowcase() {
-  const [activeTab, setActiveTab] = useState('exterior')
-
   return (
     <>
-      <Tabs defaultValue="exterior" className="w-full" onValueChange={setActiveTab}>
+      <Tabs defaultValue="exterior" className="w-full">
         <div className="overflow-x-auto pb-4">
           <TabsList className="flex justify-center space-x-2 mb-6 bg-transparent min-w-max mx-auto">
             {categories.map((category) => (

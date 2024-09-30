@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight } from 'lucide-react'
 import { Badge } from "@/components/ui/badge"
+import Image from 'next/image'
 
 interface PlanningOption {
   image: string;
@@ -82,11 +83,13 @@ function PlanningCard({ item }: { item: PlanningOption }) {
   return (
     <Card className="overflow-hidden bg-white border-neutral-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
       <CardHeader className="p-0">
-        <div className="relative w-full pt-[75%] overflow-hidden">
-          <img 
+        <div className="relative w-full pt-[75%]">
+          <Image 
             src={item.image} 
             alt={item.title} 
-            className="absolute top-0 left-0 w-full h-full object-contain origin-center -rotate-90"
+            layout="fill"
+            objectFit="contain"
+            className="absolute top-0 left-0 w-full h-full origin-center -rotate-90"
           />
         </div>
       </CardHeader>

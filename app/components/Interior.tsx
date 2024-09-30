@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
 
 // Add this interface at the top of the file
 interface InteriorItem {
@@ -160,12 +161,15 @@ function InteriorCard({ item }: { item: InteriorItem }) {
   return (
     <Card className="overflow-hidden bg-white border-neutral-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
       <CardHeader className="p-0 relative">
-        <img 
-          id={`image-${item.title}`}
-          src={item.images[currentImageIndex]} 
-          alt={`Interior Design ${currentImageIndex + 1}`} 
-          className="w-full h-64 sm:h-80 object-cover"
-        />
+        <div className="relative w-full h-64 sm:h-80">
+          <Image 
+            id={`image-${item.title}`}
+            src={item.images[currentImageIndex]} 
+            alt={`Interior Design ${currentImageIndex + 1}`} 
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
         {item.images.length > 1 && (
           <>
             <button 

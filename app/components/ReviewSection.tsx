@@ -1,6 +1,7 @@
 import React from 'react';
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
+import Image from 'next/image';
 
 const reviews = [
   {
@@ -74,7 +75,15 @@ const ReviewCard = ({
       "dark:bg-neutral-800 dark:border-neutral-700"
     )}>
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <div className="relative w-8 h-8">
+          <Image 
+            className="rounded-full" 
+            src={img} 
+            alt={`${name}'s avatar`}
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium text-neutral-800 dark:text-white font-montserrat">
             {name}

@@ -1,5 +1,3 @@
-import Link from "next/link"
-
 export default function ContactSection() {
   return (
     <section className="w-full md:py-24 lg:py-32 bg-muted">

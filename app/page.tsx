@@ -1,5 +1,5 @@
 import FurnitureShowcase from './components/FurnitureShowcase'
-import ReviewSection from './components/ReviewSection'
+// Remove the import for ReviewSection since it's not being used
 import ContactSection from './components/ContactSection'
 
 export default function Home() {
@@ -10,7 +10,6 @@ export default function Home() {
         <p className="text-center text-neutral-600 mb-7 text-sm sm:text-lg md:text-xl lg:text-2xl font-montserrat">Interior & Construction Company</p>
         <FurnitureShowcase />
       </div>
-      <ReviewSection />
       <ContactSection />
     </main>
   )

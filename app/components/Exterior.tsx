@@ -3,6 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState, useEffect, useRef } from 'react'
 import { Badge } from "@/components/ui/badge"
+import { TouchEventHandler } from 'react'
+import Image from 'next/image'
 
 // Add this interface at the top of the file
 interface ExteriorItem {
@@ -144,15 +146,15 @@ function ExteriorCard({ item }: { item: ExteriorItem }) {
   useEffect(() => {
     const imageElement = document.getElementById(`image-${item.price}`)
     if (imageElement) {
-      imageElement.addEventListener('touchstart', handleTouchStart as any, { passive: true })
-      imageElement.addEventListener('touchmove', handleTouchMove as any, { passive: true })
+      imageElement.addEventListener('touchstart', handleTouchStart as TouchEventHandler)
+      imageElement.addEventListener('touchmove', handleTouchMove as TouchEventHandler)
       imageElement.addEventListener('touchend', handleTouchEnd, { passive: true })
     }
 
     return () => {
       if (imageElement) {
-        imageElement.removeEventListener('touchstart', handleTouchStart as any)
-        imageElement.removeEventListener('touchmove', handleTouchMove as any)
+        imageElement.removeEventListener('touchstart', handleTouchStart as TouchEventHandler)
+        imageElement.removeEventListener('touchmove', handleTouchMove as TouchEventHandler)
         imageElement.removeEventListener('touchend', handleTouchEnd)
       }
     }
@@ -161,12 +163,15 @@ function ExteriorCard({ item }: { item: ExteriorItem }) {
   return (
     <Card className="overflow-hidden bg-white border-neutral-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
       <CardHeader className="p-0 relative">
-        <img 
-          id={`image-${item.price}`}
-          src={item.images[currentImageIndex]} 
-          alt={`Exterior Design ${currentImageIndex + 1}`} 
-          className="w-full h-64 sm:h-80 object-cover"
-        />
+        <div className="relative w-full h-64 sm:h-80">
+          <Image 
+            id={`image-${item.price}`}
+            src={item.images[currentImageIndex]} 
+            alt={`Exterior Design ${currentImageIndex + 1}`} 
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
         <button 
           onClick={prevImage} 
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-75 p-2 rounded-full shadow-md hover:bg-opacity-100 transition-all duration-300"
