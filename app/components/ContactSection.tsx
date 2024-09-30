@@ -34,10 +34,10 @@ export default function ContactSection() {
           </div>
         </div>
         {/* Copyright and Location */}
-        <div className="pt-8 border-t border-border">
+        <div className="pt-4 border-t border-border">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground mb-2 sm:mb-0">&copy; 2024 Shehzaan Interior & Construction Company.</p>
-            <Badge variant="secondary" className="flex items-center">
+            <Badge variant="secondary" className="flex items-center mb-4">
               <MapPin className="w-4 h-4 mr-1" />
               Bhopal, MP
             </Badge>
