@@ -71,8 +71,8 @@ const ReviewCard = ({
   return (
     <figure className={cn(
       "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4 mx-4",
-      "bg-white shadow-md hover:shadow-lg transition-shadow duration-300",
-      "dark:bg-neutral-800 dark:border-neutral-700"
+      "bg-background shadow-md hover:shadow-lg transition-shadow duration-300",
+      "dark:border-neutral-700"
     )}>
       <div className="flex flex-row items-center gap-2">
         <div className="relative w-8 h-8">
@@ -98,9 +98,9 @@ const ReviewCard = ({
 
 export default function ReviewSection() {
   return (
-    <section className="w-full py-5">
+    <section className="w-full py-5 bg-background">
       <div className="container px-4 md:px-6 max-w-7xl mx-auto">
-        <h2 className="text-2xl font-semibold text-neutral-900 mb-6 font-montserrat text-center">What Our Clients Say</h2>
+        <h2 className="text-2xl font-semibold text-foreground mb-6 font-montserrat text-center">What Our Clients Say</h2>
         <div className="relative h-[400px] w-full overflow-hidden">
           <Marquee pauseOnHover className="[--duration:40s] mb-8">
             {firstRow.map((review) => (
@@ -112,8 +112,8 @@ export default function ReviewSection() {
               <ReviewCard key={review.username} {...review} />
             ))}
           </Marquee>
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-neutral-50 to-transparent dark:from-neutral-900"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-neutral-50 to-transparent dark:from-neutral-900"></div>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background to-transparent dark:from-neutral-900"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background to-transparent dark:from-neutral-900"></div>
         </div>
       </div>
     </section>

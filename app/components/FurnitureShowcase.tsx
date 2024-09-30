@@ -18,7 +18,7 @@ export default function FurnitureShowcase() {
             <TabsTrigger
               key={category}
               value={category}
-              className="px-3 py-2 text-xs sm:text-sm md:text-base md:px-4 md:py-2 rounded-full bg-white shadow-md hover:bg-neutral-100 data-[state=active]:bg-neutral-800 data-[state=active]:text-white transition-all duration-300 font-montserrat"
+              className="px-3 py-2 text-xs sm:text-sm md:text-base md:px-4 md:py-2 rounded-full bg-card text-card-foreground shadow-md hover:bg-secondary data-[state=active]:bg-primary data-[state=active]:text-primary-foreground transition-all duration-300 font-montserrat"
             >
               {category === 'plans' ? 'Plans' : category.charAt(0).toUpperCase() + category.slice(1)}
             </TabsTrigger>

@@ -1,10 +1,10 @@
 export default function ContactSection() {
   return (
-    <section className="w-full md:py-24 lg:py-32 bg-muted">
+    <section className="w-full md:py-24 lg:py-32 bg-background">
       <div className="container px-4 md:px-6 max-w-7xl mx-auto">
         <div className="mx-auto max-w-3xl space-y-4">
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold text-neutral-900 mb-2 font-montserrat text-center">Get in touch with us</h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-2 font-montserrat text-center">Get in touch with us</h2>
             <p className="text-muted-foreground md:text-xl/relaxed font-montserrat text-center">
               कोई सवाल है या मदद चाहिए? हमारी टीम आपकी सहायता के लिए यहां है।
             </p>
