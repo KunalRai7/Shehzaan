@@ -1,5 +1,5 @@
 import FurnitureShowcase from './components/FurnitureShowcase'
-// Remove the import for ReviewSection since it's not being used
+
 import ContactSection from './components/ContactSection'
 
 export default function Home() {
