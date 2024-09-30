@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { useInView } from 'react-intersection-observer';
 
@@ -52,12 +52,7 @@ const exteriorProjects: Project[] = [
 ]
 
 export default function Work() {
-  const [imagesLoaded, setImagesLoaded] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
-  useEffect(() => {
-    setImagesLoaded(true);
-  }, []);
 
   const openModal = (src: string) => {
     setSelectedImage(src);

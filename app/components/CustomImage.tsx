@@ -4,6 +4,6 @@ const customLoader = ({ src }: { src: string }) => {
   return `${src}`;
 };
 
-export default function CustomImage(props: ImageProps) {
-  return <Image {...props} loader={customLoader} unoptimized />;
+export default function CustomImage({ alt, ...props }: ImageProps) {
+  return <Image alt={alt} {...props} loader={customLoader} unoptimized />;
 }
