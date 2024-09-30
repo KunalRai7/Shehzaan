@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Montserrat:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cormorant: 'Cormorant', serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --radius: 0.75rem;
+}
+
+body {
+  background-color: #f8f8f8;
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant);
+}
+
+.font-montserrat {
+  font-family: var(--font-montserrat);
+}
