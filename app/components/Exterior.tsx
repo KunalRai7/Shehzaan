@@ -158,7 +158,7 @@ function ExteriorCard({ item }: { item: ExteriorItem }) {
         imageElement.removeEventListener('touchend', handleTouchEnd)
       }
     }
-  }, [item.price])
+  }, [item.price, handleTouchStart, handleTouchMove, handleTouchEnd])
 
   return (
     <Card className="overflow-hidden bg-white border-neutral-200 shadow-lg hover:shadow-xl transition-shadow duration-300">

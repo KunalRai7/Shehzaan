@@ -1,11 +1,11 @@
 'use client'
 
-import { useState } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Exterior from './Exterior'
 import Interior from './Interior'
 import Planning from './Planning'
 import Work from './Work'
+import { AnimatePresence } from 'framer-motion'
 
 const categories = ['exterior', 'interior', 'plans', 'work']
 

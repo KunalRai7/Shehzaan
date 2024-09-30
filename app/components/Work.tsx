@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 const interiorProjects = [
@@ -75,12 +76,15 @@ export default function Work() {
       </h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {exteriorProjects.map((project, index) => (
-          <img 
-            key={index} 
-            src={project.src} 
-            alt={project.alt} 
-            className="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-          />
+          <div key={index} className="relative w-full h-48">
+            <Image 
+              src={project.src} 
+              alt={project.alt} 
+              layout="fill"
+              objectFit="cover"
+              className="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            />
+          </div>
         ))}
       </div>
     </motion.div>

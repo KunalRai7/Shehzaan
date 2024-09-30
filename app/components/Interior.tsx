@@ -144,19 +144,19 @@ function InteriorCard({ item }: { item: InteriorItem }) {
   useEffect(() => {
     const imageElement = document.getElementById(`image-${item.title}`)
     if (imageElement) {
-      imageElement.addEventListener('touchstart', handleTouchStart as any, { passive: true })
-      imageElement.addEventListener('touchmove', handleTouchMove as any, { passive: true })
+      imageElement.addEventListener('touchstart', handleTouchStart, { passive: true })
+      imageElement.addEventListener('touchmove', handleTouchMove, { passive: true })
       imageElement.addEventListener('touchend', handleTouchEnd, { passive: true })
     }
 
     return () => {
       if (imageElement) {
-        imageElement.removeEventListener('touchstart', handleTouchStart as any)
-        imageElement.removeEventListener('touchmove', handleTouchMove as any)
+        imageElement.removeEventListener('touchstart', handleTouchStart)
+        imageElement.removeEventListener('touchmove', handleTouchMove)
         imageElement.removeEventListener('touchend', handleTouchEnd)
       }
     }
-  }, [item.title])
+  }, [item.title, handleTouchStart, handleTouchMove, handleTouchEnd])
 
   return (
     <Card className="overflow-hidden bg-white border-neutral-200 shadow-lg hover:shadow-xl transition-shadow duration-300">
