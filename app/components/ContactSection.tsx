@@ -1,3 +1,6 @@
+import { Badge } from "@/components/ui/badge"
+import { MapPin } from "lucide-react"
+
 export default function ContactSection() {
   return (
     <section className="w-full md:py-24 lg:py-32 bg-background">
@@ -28,6 +31,16 @@ export default function ContactSection() {
               <InstagramIcon className="mr-2 h-5 w-5" />
               <span>Instagram</span>
             </a>
+          </div>
+        </div>
+        {/* Copyright and Location */}
+        <div className="pt-8 border-t border-border">
+          <div className="flex flex-col sm:flex-row justify-between items-center">
+            <p className="text-sm text-muted-foreground mb-2 sm:mb-0">&copy; 2024 Shehzaan Interior & Construction Company.</p>
+            <Badge variant="secondary" className="flex items-center">
+              <MapPin className="w-4 h-4 mr-1" />
+              Bhopal, MP
+            </Badge>
           </div>
         </div>
       </div>
