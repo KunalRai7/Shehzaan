@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import Image from 'next/image'
 
 // Add this interface at the top of the file
@@ -112,41 +112,41 @@ function InteriorCard({ item }: { item: InteriorItem }) {
   const touchStartX = useRef(0)
   const touchEndX = useRef(0)
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     setCurrentImageIndex((prevIndex) => 
       prevIndex === item.images.length - 1 ? 0 : prevIndex + 1
     )
-  }
+  }, [item.images.length])
 
-  const prevImage = () => {
+  const prevImage = useCallback(() => {
     setCurrentImageIndex((prevIndex) => 
       prevIndex === 0 ? item.images.length - 1 : prevIndex - 1
     )
-  }
+  }, [item.images.length])
 
-  const handleTouchStart = (e: React.TouchEvent) => {
+  const handleTouchStart = useCallback((e: TouchEvent) => {
     touchStartX.current = e.touches[0].clientX
-  }
+  }, [])
 
-  const handleTouchMove = (e: React.TouchEvent) => {
+  const handleTouchMove = useCallback((e: TouchEvent) => {
     touchEndX.current = e.touches[0].clientX
-  }
+  }, [])
 
-  const handleTouchEnd = () => {
+  const handleTouchEnd = useCallback(() => {
     if (touchStartX.current - touchEndX.current > 50) {
       nextImage()
     }
     if (touchEndX.current - touchStartX.current > 50) {
       prevImage()
     }
-  }
+  }, [nextImage, prevImage])
 
   useEffect(() => {
     const imageElement = document.getElementById(`image-${item.title}`)
     if (imageElement) {
-      imageElement.addEventListener('touchstart', handleTouchStart, { passive: true })
-      imageElement.addEventListener('touchmove', handleTouchMove, { passive: true })
-      imageElement.addEventListener('touchend', handleTouchEnd, { passive: true })
+      imageElement.addEventListener('touchstart', handleTouchStart)
+      imageElement.addEventListener('touchmove', handleTouchMove)
+      imageElement.addEventListener('touchend', handleTouchEnd)
     }
 
     return () => {
