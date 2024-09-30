@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { createPortal } from 'react-dom'
 import { useInView } from 'react-intersection-observer';
 
