@@ -12,7 +12,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const basePath = process.env.NODE_ENV === 'production' ? '/Shehzaan' : '';
   const GA_MEASUREMENT_ID = 'G-8GF0Z0WF7Y';
 
   return (
