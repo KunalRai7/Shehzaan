@@ -1,7 +1,10 @@
 import Script from 'next/script'
-const GA_MEASUREMENT_ID = 'G-8GF0Z0WF7Y';
 
-export default function GoogleAnalytics() {
+interface GoogleAnalyticsProps {
+  GA_MEASUREMENT_ID: string;
+}
+
+export default function GoogleAnalytics({ GA_MEASUREMENT_ID }: GoogleAnalyticsProps) {
   return (
     <>
       <Script
