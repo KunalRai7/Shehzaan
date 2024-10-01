@@ -17,7 +17,7 @@ export default function ContactSection() {
               href="https://wa.me/+918319099875"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-10 items-center justify-center rounded-md bg-green-500 px-4 sm:px-8 text-sm font-medium text-white shadow transition-colors hover:bg-green-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 font-montserrat"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-green-500 px-4 sm:px-8 text-sm font-medium text-white shadow transition-colors hover:bg-green-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 font-montserrat tap-highlight-transparent"
             >
               <WhatsAppIcon className="mr-2 h-5 w-5" />
               <span>WhatsApp</span>
@@ -26,7 +26,7 @@ export default function ContactSection() {
               href="https://www.instagram.com/sheh_zaan01"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-10 items-center justify-center rounded-md bg-black px-4 sm:px-8 text-sm font-medium text-white shadow transition-colors hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 font-montserrat"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-black px-4 sm:px-8 text-sm font-medium text-white shadow transition-colors hover:bg-gray-800 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 font-montserrat tap-highlight-transparent"
             >
               <InstagramIcon className="mr-2 h-5 w-5" />
               <span>Instagram</span>

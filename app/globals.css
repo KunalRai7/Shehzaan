@@ -54,3 +54,8 @@ body {
     font-family: 'Dancing Script', cursive;
   }
 }
+
+/* Add this new class for tap highlight removal */
+.tap-highlight-transparent {
+  -webkit-tap-highlight-color: transparent;
+}
