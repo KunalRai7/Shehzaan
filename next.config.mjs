@@ -1,12 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  // Add assetPrefix and basePath
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/' : '',
+  basePath: '',
   images: {
     unoptimized: true,
   },
-  basePath: '/Shehzaan',
-  assetPrefix: '/Shehzaan/',
-  transpilePackages: ['framer-motion'],
-};
+  // Add trailing slash option
+  trailingSlash: true,
+}
 
-export default nextConfig;
+export default nextConfig
