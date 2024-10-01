@@ -59,3 +59,27 @@ body {
 .tap-highlight-transparent {
   -webkit-tap-highlight-color: transparent;
 }
+
+/* Add these new classes for tap highlight removal */
+.tap-highlight-transparent,
+.no-tap-highlight {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Global styles to remove tap highlight */
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* Additional styles for mobile devices */
+@media (max-width: 768px) {
+  a, button {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
