@@ -24,7 +24,7 @@ const exteriorItems: ExteriorItem[] = [
       'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-05-42-n7vevMPkCxSJgPPetQYMSSkDXu4Zo3.jpg',
       'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-05-45-JDRPc55wUFnerk5uWkVHhNgalNujDI.jpg'
     ],
-    size: 'If the width of your house is 20 feet or less then',
+    size: 'If the width of your house is 20 feet or less than',
     sizeHindi: 'अगर आपके घर की चौड़ाई 20 फीट है या फिर उससे कम है',
     features: [
       '3D view with 2D working dimensions',
