@@ -2,7 +2,8 @@ import { motion } from 'framer-motion'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState, useEffect, useRef, useCallback } from 'react'
-import { Badge } from "@/components/ui/badge"
+// Remove the following line
+// import { Badge } from "@/components/ui/badge"
 import Image from 'next/image'
 
 // Add this interface at the top of the file
