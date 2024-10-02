@@ -210,3 +210,4 @@ function ExteriorCard({ item }: { item: ExteriorItem }) {
     </Card>
   )
 }
+//  <Badge variant="outline" className="bg-neutral-50 text-neutral-900 px-3 py-1 mb-4 text-sm font-montserrat">
