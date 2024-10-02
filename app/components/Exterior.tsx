@@ -23,8 +23,8 @@ const exteriorItems: ExteriorItem[] = [
       'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-05-42-n7vevMPkCxSJgPPetQYMSSkDXu4Zo3.jpg',
       'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-05-45-JDRPc55wUFnerk5uWkVHhNgalNujDI.jpg'
     ],
-    size: '20ft or under',
-    sizeHindi: ' 20 फीट या उससे कम',
+    size: 'If the width of your house is 20 feet or less then',
+    sizeHindi: 'अगर आपके घर की चौड़ाई 20 फीट है या फिर उससे कम है',
     features: [
       '3D view with 2D working dimensions',
       '3 changes available',
@@ -46,8 +46,8 @@ const exteriorItems: ExteriorItem[] = [
       'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-08-33-UY13g5A6nLifnZqyulNhRrU9LSXhJj.jpg'
     ],
     price: '₹8,000/-',
-    size: '21ft or above',
-    sizeHindi: ' 21 फीट या उससे अधिक',
+    size: 'If the width of your house is more than 21 feet',
+    sizeHindi: 'अगर आपके घर की चौड़ाई 21 फीट से ज़्यादा है तो',
     features: [
       '3D view with 2D working dimensions',
       '3 changes available',
@@ -186,11 +186,13 @@ function ExteriorCard({ item }: { item: ExteriorItem }) {
         </button>
       </CardHeader>
       <CardContent className="p-6 sm:p-8">
-        <CardTitle className="text-3xl font-semibold text-neutral-900 mb-6 font-montserrat">{item.price}</CardTitle>
+        <CardTitle className="text-3xl font-semibold text-neutral-900 mb-2 font-montserrat">{item.price}</CardTitle>
         {item.size && (
-          <Badge variant="outline" className="bg-neutral-50 text-neutral-900 px-3 py-1 mb-4 text-sm font-montserrat">
-            {item.size} / {item.sizeHindi}
-          </Badge>
+          <p className="text-sm text-black-500 mb-4 font-montserrat font-semibold">
+            {item.size}
+            <br />
+            <strong className="text-neutral-600">{item.sizeHindi}</strong>
+          </p>
         )}
         <ul className="space-y-3">
           {item.features.map((feature: string, i: number) => (
