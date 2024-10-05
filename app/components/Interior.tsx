@@ -16,10 +16,10 @@ interface InteriorItem {
 const interiorItems: InteriorItem[] = [
   {
     images: [
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/photo_2024-09-27_16-59-35-nZine5QYZacSdOOBIC1LhEpby9sw9n.jpg',
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-30_12-22-19-gueC1KstkymuIdX4KpUVscZ0OqDyPT.jpg',
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-30_12-22-22-YMetdLkBBpv6NTbXobB3i7bM0Bv4KY.jpg',
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-30_12-22-25-KSwuoflN9Go2KnnN9riG3qItPSb2BB.jpg',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728112625/int1_ayxejg.jpg',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728112627/int2_zi2g7w.jpg',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728112627/int3_lcbh0w.jpg',
+      
     ],
     title: 'Interior Design',
     titleHindi: 'इंटीरियर डिजाइन',
@@ -40,10 +40,9 @@ const interiorItems: InteriorItem[] = [
   },
   {
     images: [
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/photo_2024-09-27_16-45-42-XBGSFM10SFZUpO1Lq93bAEYtGe7Vm6.jpg',
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-30_12-24-34-3cSqO2WIZJU2kqKZft5XVqAOE2hZTV.jpg',
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-30_12-24-37-u1cajL7w2XkEpZRFpw8veONc3mSmYV.jpg',
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-30_12-24-40-7jeP9v5ugrxjPcVC2GcziOzzR9AfVm.jpg',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728112628/kitchen1_vsxrcc.jpg',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728112628/kitchen2_i9qrji.jpg',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728112629/kitchen3_qpp7wp.jpg',
     ],
     title: 'Kitchen Design',
     titleHindi: 'किचन डिजाइन',
@@ -64,7 +63,7 @@ const interiorItems: InteriorItem[] = [
   },
   {
     images: [
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/photo_2024-09-27_17-16-46-UEmQ8GCmRMc12yKSitXUR9NOXUd8GS.jpg'
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728112600/bathroom_qjoavc.jpg'
     ],
     title: 'Bathroom Design',
     titleHindi: 'बाथरूम डिजाइन',
