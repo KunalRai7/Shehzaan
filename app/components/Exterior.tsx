@@ -20,9 +20,9 @@ const exteriorItems: ExteriorItem[] = [
   {
     price: "₹6,000/-",
     images: [
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/interior-1-la1i0urVL8RWQFrdPundPG8o0NW6SB.jpg',
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-05-42-n7vevMPkCxSJgPPetQYMSSkDXu4Zo3.jpg',
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-05-45-JDRPc55wUFnerk5uWkVHhNgalNujDI.jpg'
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728112390/20ft1_htw28l.jpg',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728112390/20ft2_cwtp8f.jpg',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728112391/20ft3_arj36n.jpg'
     ],
     size: 'If the width of your house is 20 feet or less than',
     sizeHindi: 'अगर आपके घर की चौड़ाई 20 फीट है या फिर उससे कम है',
@@ -41,10 +41,10 @@ const exteriorItems: ExteriorItem[] = [
   },
   {
     images: [
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/interior-2-HRwGpHrTiatmSKm89CLd5pW7G6bJ3W.jpg',
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-08-27-zEZeuqylQA3iMItQYm92M02EKG2KxY.jpg',
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-08-30-5EAFd4mKTuOt0Ei2283eMMl3SrXFFM.jpg',
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-08-33-UY13g5A6nLifnZqyulNhRrU9LSXhJj.jpg'
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728112286/Shehzaan/yr8nq155qkaxty6dkc01.jpg',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728112287/Shehzaan/usd7v8n1ezpvsvimuimw.jpg',
+      
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728112287/Shehzaan/gqnmlseh62uyyxos4znh.jpg'
     ],
     price: '₹8,000/-',
     size: 'If the width of your house is more than 21 feet',
@@ -64,10 +64,9 @@ const exteriorItems: ExteriorItem[] = [
   },
   {
     images: [
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/interior-3-3Ek03znNird4rWg7C4ZsyYfn16U0rj.jpg',
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-09-28-m3AanmBsCXfgFjpzEDvGv6q6uPnXOa.jpg',
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-09-31-qAHFjtpYmNUVI7edEZvSJzFvsNAqdI.jpg',
-      'https://trb9yrhq5p76ro9s.public.blob.vercel-storage.com/work/photo_2024-09-29_23-09-34-1khowpj3psGOQp1DU5aBUIuGodVLpJ.jpg'
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728112090/corner1_lvrojt.jpg',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728112091/corner2_pbhruy.jpg',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728112091/corner3_h1jxsq.jpg'
     ],
     price: '₹12,000/-',
     size: 'Corner plot 2 side Elevation',
