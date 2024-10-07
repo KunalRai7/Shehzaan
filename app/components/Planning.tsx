@@ -16,7 +16,7 @@ interface PlanningOption {
 
 const planningOptions: PlanningOption[] = [
   {
-    image: 'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728111498/Shehzaan/PLAN1.jpg',
+    image: 'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto/Shehzaan/PLAN1',
     price: '4 Rupees per square feet',
     priceHindi: '4 रुपये प्रति वर्ग फुट',
     title: '1st Plan',
@@ -33,7 +33,7 @@ const planningOptions: PlanningOption[] = [
     ]
   },
   {
-    image: 'https://res.cloudinary.com/drwlqwn9k/image/upload/v1728111499/Shehzaan/PLAN2.jpg',
+    image: 'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto/Shehzaan/PLAN2',
     price: '5 Rupees per square feet',
     priceHindi: '5 रुपये प्रति वर्ग फुट',
     title: '2nd Plan',
