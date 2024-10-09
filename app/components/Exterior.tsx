@@ -20,7 +20,7 @@ const exteriorItems: ExteriorItem[] = [
   {
     price: "₹6,000/-",
     images: [
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto/20ft1_htw28l',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto:eco/20ft1_htw28l',
       'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto/20ft2_cwtp8f',
       'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto/20ft3_arj36n'
     ],
@@ -41,7 +41,7 @@ const exteriorItems: ExteriorItem[] = [
   },
   {
     images: [
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto/Shehzaan/yr8nq155qkaxty6dkc01',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto:eco/Shehzaan/yr8nq155qkaxty6dkc01',
       'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto/Shehzaan/usd7v8n1ezpvsvimuimw',
       
       'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto/Shehzaan/gqnmlseh62uyyxos4znh'
