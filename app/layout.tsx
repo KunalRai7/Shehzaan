@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import GoogleAnalytics from './components/GoogleAnalytics'
 import { cormorant, montserrat, dancingScript } from './fonts'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Shehzaan  ',
@@ -19,7 +19,18 @@ export default function RootLayout({
     <html lang="en" className={`${cormorant.variable} ${montserrat.variable} ${dancingScript.variable}`}>
       <body>
         {children}
-        <GoogleAnalytics GA_MEASUREMENT_ID={GA_MEASUREMENT_ID} />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
       </body>
     </html>
   )
