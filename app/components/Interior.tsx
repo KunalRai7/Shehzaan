@@ -16,9 +16,9 @@ interface InteriorItem {
 const interiorItems: InteriorItem[] = [
   {
     images: [
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/int1_ayxejg',
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/int2_zi2g7w',
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/int3_lcbh0w',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_webp,f_avif/int1_ayxejg',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_webp,f_avif/int2_zi2g7w',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_webp,f_avif/int3_lcbh0w',
     ],
     title: 'Interior Design',
     titleHindi: 'इंटीरियर डिजाइन',
@@ -39,9 +39,9 @@ const interiorItems: InteriorItem[] = [
   },
   {
     images: [
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/kitchen1_vsxrcc',
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/kitchen2_i9qrji',
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/kitchen3_qpp7wp',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_webp,f_avif/kitchen1_vsxrcc',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_webp,f_avif/kitchen2_i9qrji',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_webp,f_avif/kitchen3_qpp7wp',
     ],
     title: 'Kitchen Design',
     titleHindi: 'किचन डिजाइन',
@@ -62,7 +62,7 @@ const interiorItems: InteriorItem[] = [
   },
   {
     images: [
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/bathroom_qjoavc'
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_webp,f_avif/bathroom_qjoavc'
     ],
     title: 'Bathroom Design',
     titleHindi: 'बाथरूम डिजाइन',

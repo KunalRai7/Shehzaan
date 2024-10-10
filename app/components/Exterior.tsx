@@ -20,12 +20,12 @@ const exteriorItems: ExteriorItem[] = [
   {
     price: "₹6,000/-",
     images: [
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/20ft1_htw28l',
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/20ft2_cwtp8f',
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/20ft3_arj36n'
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_webp,f_avif/20ft1_htw28l',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_webp,f_avif/20ft2_cwtp8f',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_webp,f_avif/20ft3_arj36n'
     ],
     size: 'If the width of your house is 20 feet or less than',
-    sizeHindi: 'अगर आपके घर की चौड़ाई 20 फीट है या फिर उससे कम है',
+    sizeHindi: 'अगर आपके घर की चौड़ाई 20 फीट या उससे कम है',
     features: [
       '3D view with 2D working dimensions',
       '3 changes available',
@@ -41,9 +41,9 @@ const exteriorItems: ExteriorItem[] = [
   },
   {
     images: [
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/Shehzaan/yr8nq155qkaxty6dkc01',
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/Shehzaan/usd7v8n1ezpvsvimuimw',
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/Shehzaan/gqnmlseh62uyyxos4znh'
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_webp,f_avif/Shehzaan/yr8nq155qkaxty6dkc01',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_webp,f_avif/Shehzaan/usd7v8n1ezpvsvimuimw',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_webp,f_avif/Shehzaan/gqnmlseh62uyyxos4znh'
     ],
     price: '₹8,000/-',
     size: 'If the width of your house is more than 21 feet',
@@ -63,9 +63,9 @@ const exteriorItems: ExteriorItem[] = [
   },
   {
     images: [
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/corner1_lvrojt',
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/corner2_pbhruy',
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/corner3_h1jxsq'
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_webp,f_avif/corner1_lvrojt',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_webp,f_avif/corner2_pbhruy',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_webp,f_avif/corner3_h1jxsq'
     ],
     price: '₹12,000/-',
     size: 'Corner plot 2 side Elevation',
@@ -144,8 +144,8 @@ function ExteriorCard({ item }: { item: ExteriorItem }) {
   useEffect(() => {
     const imageElement = document.getElementById(`image-${item.price}`)
     if (imageElement) {
-      imageElement.addEventListener('touchstart', handleTouchStart)
-      imageElement.addEventListener('touchmove', handleTouchMove)
+      imageElement.addEventListener('touchstart', handleTouchStart, { passive: true })
+      imageElement.addEventListener('touchmove', handleTouchMove, { passive: true })
       imageElement.addEventListener('touchend', handleTouchEnd)
     }
 
@@ -208,5 +208,4 @@ function ExteriorCard({ item }: { item: ExteriorItem }) {
       </CardContent>
     </Card>
   )
-}
-//  <Badge variant="outline" className="bg-neutral-50 text-neutral-900 px-3 py-1 mb-4 text-sm font-montserrat">
+}//  <Badge variant="outline" className="bg-neutral-50 text-neutral-900 px-3 py-1 mb-4 text-sm font-montserrat">
