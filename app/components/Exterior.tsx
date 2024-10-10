@@ -20,9 +20,9 @@ const exteriorItems: ExteriorItem[] = [
   {
     price: "₹6,000/-",
     images: [
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto:eco/20ft1_htw28l',
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto/20ft2_cwtp8f',
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto/20ft3_arj36n'
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/20ft1_htw28l',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/20ft2_cwtp8f',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/20ft3_arj36n'
     ],
     size: 'If the width of your house is 20 feet or less than',
     sizeHindi: 'अगर आपके घर की चौड़ाई 20 फीट है या फिर उससे कम है',
@@ -41,10 +41,9 @@ const exteriorItems: ExteriorItem[] = [
   },
   {
     images: [
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto:eco/Shehzaan/yr8nq155qkaxty6dkc01',
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto/Shehzaan/usd7v8n1ezpvsvimuimw',
-      
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto/Shehzaan/gqnmlseh62uyyxos4znh'
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/Shehzaan/yr8nq155qkaxty6dkc01',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/Shehzaan/usd7v8n1ezpvsvimuimw',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/Shehzaan/gqnmlseh62uyyxos4znh'
     ],
     price: '₹8,000/-',
     size: 'If the width of your house is more than 21 feet',
@@ -64,9 +63,9 @@ const exteriorItems: ExteriorItem[] = [
   },
   {
     images: [
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto/corner1_lvrojt',
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto/corner2_pbhruy',
-      'https://res.cloudinary.com/drwlqwn9k/image/upload/f_auto,q_auto/corner3_h1jxsq'
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/corner1_lvrojt',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/corner2_pbhruy',
+      'https://res.cloudinary.com/drwlqwn9k/image/upload/w_800,c_scale,q_auto,f_auto/corner3_h1jxsq'
     ],
     price: '₹12,000/-',
     size: 'Corner plot 2 side Elevation',
