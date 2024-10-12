@@ -19,8 +19,10 @@ export default function ContactSection() {
               className="inline-flex h-10 items-center justify-center rounded-md bg-green-500 px-4 sm:px-8 text-sm font-medium text-white shadow transition-colors hover:bg-green-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 font-montserrat tap-highlight-transparent no-tap-highlight"
             >
               <PhoneIcon className="mr-2 h-5 w-5" />
-              <span>Call Now</span>
-              <span className="ml-2">(12 PM - 7 PM)</span>
+              <div className="flex flex-col sm:flex-row">
+                <span>Call Now</span>
+                <span className="sm:ml-2 sm:mt-0">(12 PM - 7 PM)</span>
+              </div>
             </a>
             <a
               href="https://www.instagram.com/sheh_zaan01"
