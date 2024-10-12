@@ -20,6 +20,7 @@ export default function ContactSection() {
             >
               <PhoneIcon className="mr-2 h-5 w-5" />
               <span>Call Now</span>
+              <span className="ml-2">(12 PM - 7 PM)</span>
             </a>
             <a
               href="https://www.instagram.com/sheh_zaan01"
