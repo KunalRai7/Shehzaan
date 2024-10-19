@@ -9,7 +9,7 @@ export default function ContactSection() {
 
   const handleCallNowClick = () => {
     trackEvent({
-      action: 'click',
+      action: 'Callings',
       category: 'Contact',
       label: 'Call Now Button',
     })
