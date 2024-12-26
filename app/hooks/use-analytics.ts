@@ -9,11 +9,29 @@ interface EventOptions {
   value?: number
 }
 
+interface Window {
+  gtag: (
+    command: string,
+    action: string,
+    params: {
+      event_category: string;
+      event_label?: string;
+      value?: number;
+    }
+  ) => void;
+}
+
+declare global {
+  interface Window {
+    gtag: Window['gtag'];
+  }
+}
+
 export const useAnalytics = () => {
   const trackEvent = useCallback(({ action, category, label, value }: EventOptions) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
+    if (typeof window !== 'undefined' && window.gtag) {
       console.log('Tracking event:', { action, category, label, value }) // Debugging log
-      ;(window as any).gtag('event', action, {
+      window.gtag('event', action, {
         event_category: category,
         event_label: label,
         value: value,
