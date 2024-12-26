@@ -23,15 +23,13 @@ const interiorItems: InteriorItem[] = [
     title: 'Interior Design',
     titleHindi: 'इंटीरियर डिजाइन',
     features: [
-      '1 Room design rate - 4,000/-',
-      'More than 2 room rate - 3,000/- per room',
+      'Interior design rate - 4,000/- per room',
       '3D design with 2D dimensions',
       '3 Changes available',
       '50% payment must be in advance',
     ],
     featuresHindi: [
-      '1 कमरे के डिज़ाइन का रेट - 4,000/-',
-      '2 से ज्यादा कामरो के डिजाइन का रेट 3,000/- एक रूम',
+      'इंटीरियर डिजाइन का रेट - 4,000/- प्रति रूम',
       '3डी व्यू 2डी प्लानिंग के साथ',
       '3 परिवर्तन करवा सकते हैं',
       '50% एडवांस देना अनिवार्य है',
