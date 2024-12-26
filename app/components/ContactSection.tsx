@@ -2,19 +2,8 @@
 
 import { Badge } from "@/components/ui/badge"
 import { MapPin, Phone } from "lucide-react"
-import { useAnalytics } from "@/app/hooks/use-analytics"
 
 export default function ContactSection() {
-  const { trackEvent } = useAnalytics()
-
-  const handleCallNowClick = () => {
-    trackEvent({
-      action: 'Callings',
-      category: 'Contact',
-      label: 'Call Now Button',
-    })
-  }
-
   return (
     <section className="w-full md:py-24 lg:py-32 bg-background">
       <div className="container px-4 md:px-6 max-w-7xl mx-auto">
@@ -28,7 +17,6 @@ export default function ContactSection() {
           <div className="flex flex-row gap-4 justify-center pb-6">
             <a
               href="tel:+918319099875"
-              onClick={handleCallNowClick}
               className="inline-flex h-10 items-center justify-center rounded-md bg-green-500 px-4 sm:px-8 text-sm font-medium text-white shadow transition-colors hover:bg-green-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 font-montserrat tap-highlight-transparent no-tap-highlight"
             >
               <PhoneIcon className="mr-2 h-5 w-5" />
